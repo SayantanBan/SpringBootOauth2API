@@ -56,7 +56,7 @@ public class UserResource {
 	@Autowired
 	private JavaMailSender mailSender;
 
-	@CrossOrigin(origins = { "http://localhost:4200", "http://localhost:6003" })
+	@CrossOrigin(origins = { "http://localhost:4200", "https://eutivityrestaurantcrm365.firebaseapp.com" })
 	@RequestMapping(value="/getCurrentUser", method = RequestMethod.POST)
 	public ResponseEntity getCurrentUser(HttpServletRequest request, @RequestBody HashMap<String, String> mapper) {
 
@@ -73,7 +73,7 @@ public class UserResource {
 
 	}
 
-	@CrossOrigin(origins = { "http://localhost:4200", "http://localhost:6003" })
+	@CrossOrigin(origins = { "http://localhost:4200", "https://eutivityrestaurantcrm365.firebaseapp.com" })
 	@RequestMapping(value = "/forgetPassword", method = RequestMethod.POST)
 	public ResponseEntity forgetPasswordPost(HttpServletRequest request, @RequestBody HashMap<String, String> mapper)
 			throws Exception {
@@ -96,7 +96,7 @@ public class UserResource {
 
 	}
 
-	@CrossOrigin(origins = { "http://localhost:4200", "http://localhost:6003" })
+	@CrossOrigin(origins = { "http://localhost:4200", "https://eutivityrestaurantcrm365.firebaseapp.com" })
 	@RequestMapping(value="/updateUserInfo", method=RequestMethod.POST)
 	public ResponseEntity profileInfo(
 				@RequestBody HashMap<String, Object> mapper
@@ -157,7 +157,7 @@ public class UserResource {
 		return new ResponseEntity("Update Success", HttpStatus.OK);
 	}
 
-	@CrossOrigin(origins = { "http://localhost:4200", "http://localhost:6003" })
+	@CrossOrigin(origins = { "http://localhost:4200", "https://eutivityrestaurantcrm365.firebaseapp.com" })
 	@RequestMapping(value = "/newUser", method = RequestMethod.POST)
 	public ResponseEntity<String> newUserPost(HttpServletRequest request, @RequestBody HashMap<String, String> mapper)
 			throws Exception {
