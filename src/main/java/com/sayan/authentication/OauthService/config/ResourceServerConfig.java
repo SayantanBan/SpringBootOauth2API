@@ -27,12 +27,11 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
                 http
+                .csrf().disable()
                 .requestMatchers()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/**/oauth/token").permitAll()
-                .csrf().disable()
-                .antMatchers("/actuator/**", "/api-docs/**").permitAll()
+                .antMatchers("/**/oauth/token", "/actuator/**", "/api-docs/**").permitAll()
                 .antMatchers("/springjwt/**" ).authenticated();
     }
 }
