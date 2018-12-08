@@ -30,6 +30,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/actuator/**", "/api-docs/**").permitAll()
-                .antMatchers("/springjwt/**" ).authenticated();
+                .antMatchers("/springjwt/**" ).authenticated()
+                .csrf().disable().authorizeRequests().antMatchers(HttpMethod.OPTIONS, "/oauth/token").permitAll();
     }
 }
