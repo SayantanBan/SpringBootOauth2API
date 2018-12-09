@@ -21,9 +21,8 @@ public class AdditionalWebConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOrigin("https://eutivityrestaurantcrm365.firebaseapp.com");
-        config.addAllowedOrigin("http://localhost:4200");
-        config.addAllowedHeader("Authorization, Content-Type");
+        config.addAllowedOrigin("*");
+        config.addAllowedHeader("*");
         config.addAllowedMethod("*");
         source.registerCorsConfiguration("/**", config);
         FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
