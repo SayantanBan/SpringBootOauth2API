@@ -24,6 +24,10 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.server.session.HeaderWebSessionIdResolver;
 
+import org.springframework.http.HttpMethod;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
+
+
 import com.sayan.authentication.OauthService.service.impl.AppUserDetailsService;
 
 
@@ -52,6 +56,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	public BCryptPasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
+	}
+	
+	@Override
+	public void configure(WebSecurity web) throws Exception {
+	    web.ignoring().antMatchers(HttpMethod.OPTIONS, "/oauth/token");
 	}
 	
 
