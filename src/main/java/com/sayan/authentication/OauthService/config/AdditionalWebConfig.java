@@ -23,6 +23,7 @@ public class AdditionalWebConfig {
         config.setAllowCredentials(true);
         config.addAllowedOrigin("https://api-eutivityrestaurantcrm365.herokuapp.com");
         config.addAllowedOrigin("https://eutivityrestaurantcrm365.firebaseapp.com");
+        config.addAllowedOrigin("https://restaurantcrm.sayantanbanerjee.tk/login");
         config.addAllowedHeader("*");
         config.addAllowedHeader("Authorization");
         config.addAllowedMethod("*");
