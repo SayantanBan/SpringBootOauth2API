@@ -87,6 +87,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(Arrays.asList("https://api-eutivityrestaurantcrm365.herokuapp.com"));
+	configuration.setAllowedOrigins(Arrays.asList("https://restaurantcrm.sayantanbanerjee.tk/login"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("authorization", "content-type", "x-auth-token", "Authorization"));
         configuration.setExposedHeaders(Arrays.asList("x-auth-token"));
