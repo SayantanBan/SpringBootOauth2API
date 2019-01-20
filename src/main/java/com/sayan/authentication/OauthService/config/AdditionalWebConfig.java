@@ -22,8 +22,8 @@ public class AdditionalWebConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
         config.addAllowedOrigin("https://api-eutivityrestaurantcrm365.herokuapp.com");
-        config.addAllowedOrigin("https://eutivityrestaurantcrm365.firebaseapp.com");
         config.addAllowedOrigin("https://restaurantcrm.sayantanbanerjee.tk/login");
+        config.addAllowedOrigin("https://eutivityrestaurantcrm365.firebaseapp.com");
         config.addAllowedHeader("*");
         config.addAllowedHeader("Authorization");
         config.addAllowedMethod("*");
