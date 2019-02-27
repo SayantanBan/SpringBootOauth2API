@@ -22,6 +22,7 @@ public class AdditionalWebConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
         config.addAllowedOrigin("https://restaurantcrm.sayantanbanerjee.tk");
+        config.addAllowedOrigin("https://sayantanbanerjee.tk");
         config.addAllowedOrigin("https://eutivityrestaurantcrm365.firebaseapp.com");
         config.addAllowedHeader("*");
         config.addAllowedHeader("Authorization");
